@@ -11,14 +11,7 @@
 
 {% block body %}
 
-    <label class="toggle-switch">
-        <input type="checkbox"  id="toggleCheckbox" />
-        <span class="slider">
-        </span>
-    </label>
-    
-    
-<p id="toggleText">Этот текст будет скрываться и появляться.</p>
+  
 
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
@@ -27,10 +20,17 @@
 
     <label for = "toggle-switch">18:</label>
 
+      <label class="toggle-switch">
+        <input type="checkbox"  id="toggleCheckbox" />
+        <span class="slider">
+        </span>
+    </label>
     
+    
+<p id="toggleText">Этот текст будет скрываться и появляться.</p>
 
 
-import './bootstrap.js';
+
 
         <label for="name">Имя:</label>
         <input name="name" id="name" type="text">
