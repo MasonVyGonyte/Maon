@@ -2,19 +2,61 @@
 
 {% block title %}Hello ConferenceController!{% endblock %}
 
+{% block stylesheets %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+{% endblock %}
+
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+
+    <label class="toggle-switch">
+        <input type="checkbox"  id="toggleCheckbox" />
+        <span class="slider">
+        </span>
+    </label>
+    
+    
+<p id="toggleText">Этот текст будет скрываться и появляться.</p>
 
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
 
+    <form action="{{ path('handle_form') }}" method="post">
+
+    <label for = "toggle-switch">18:</label>
+
+    
+
+
+import './bootstrap.js';
+
+        <label for="name">Имя:</label>
+        <input name="name" id="name" type="text">
+
+        <label for="age">Возраст:</label>
+        <input name="age" id="age" type="number">
+
+         <label for="secondName">Фамилия:</label>
+        <input name="secondNameame" id="secondName" type="text">
+
+        <label for="thirdName">Отчество:</label>
+        <input name="thirdName" id="thirdName" type="text">
+
+        <label for="numberPassport">Номер паспорта:</label>
+        <input name="numberPassport" id="numberPassport" type="number">
+
+        <label for="serialPassport">Серия паспорта:</label>
+        <input name="serialPassport" id="serialPassport" type="number">
+
+        <button type="submit">Отправить</button>
+    </form>
+
     This friendly message is coming from:
     <ul>
-        <li>Your controller at <code>C:/Users/1/guestbook/src/Controller/ConferenceController.php</code></li>
-        <li>Your template at <code>C:/Users/1/guestbook/templates/conference/index.html.twig</code></li>
+        <li>Your controller at <code>{{ controller_path }}</code></li>
+            <li>Your template at <code>{{ template_path }}</code></li>
     </ul>
 </div>
 {% endblock %}

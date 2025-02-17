@@ -38,14 +38,12 @@
         "symfony/stimulus-bundle": "^2.17",
         "symfony/string": "6.4.*",
         "symfony/translation": "6.4.*",
-        "symfony/twig-bundle": "6.4.*",
         "symfony/ux-turbo": "^2.17",
         "symfony/validator": "6.4.*",
         "symfony/web-link": "6.4.*",
         "symfony/yaml": "6.4.*",
         "symfonycorp/platformsh-meta": "^1.0",
-        "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "3.8"
     },
     "config": {
         "allow-plugins": {
