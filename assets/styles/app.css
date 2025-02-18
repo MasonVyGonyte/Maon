@@ -3,3 +3,71 @@ body {
     background-size: 100%;
 }
 
+.grid-form {
+    position: fixed; /* Фиксированное положение */
+    top: 50%; /* Смещение вниз на 50% экрана */
+    left: 50%; /* Смещение вправо на 50% экрана */
+    transform: translate(-50%, -50%); /* Центрируем относительно самого себя */
+    display: grid;
+    gap: 15px; /* Расстояние между полями */
+    place-items: center;
+    width: 600px; /* Ширина формы */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+textarea {
+    resize: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем по горизонтали */
+    gap: 15px; /* Расстояние между полями */
+    max-width: 500px; /* Ограничение по ширине */
+    margin: auto; /* Центрирование на странице */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.full-width {
+    grid-column: span 2;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Кнопка отправки */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

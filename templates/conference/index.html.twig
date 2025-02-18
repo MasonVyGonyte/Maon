@@ -16,9 +16,13 @@
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
 
-    <form action="{{ path('handle_form') }}" method="post">
+ <p id="toggleText">Этот текст будет скрываться и появляться.</p>
+    
+    <form action="{{ path('handle_form') }}" method="post" class="grid-form">
 
-    <label for = "toggle-switch">18:</label>
+   
+
+<label for = "toggle-switch">Я представитель(родитель или опекун):</label>
 
       <label class="toggle-switch">
         <input type="checkbox"  id="toggleCheckbox" />
@@ -27,36 +31,51 @@
     </label>
     
     
-<p id="toggleText">Этот текст будет скрываться и появляться.</p>
 
 
 
-
+       <div class="form-group">
         <label for="name">Имя:</label>
         <input name="name" id="name" type="text">
+    </div>
 
+    <div class="form-group">
         <label for="age">Возраст:</label>
         <input name="age" id="age" type="number">
+    </div>
 
-         <label for="secondName">Фамилия:</label>
-        <input name="secondNameame" id="secondName" type="text">
-
-        <label for="thirdName">Отчество:</label>
-        <input name="thirdName" id="thirdName" type="text">
-
+    <div class="form-group">
         <label for="numberPassport">Номер паспорта:</label>
         <input name="numberPassport" id="numberPassport" type="number">
+    </div>
 
+    <div class="form-group">
         <label for="serialPassport">Серия паспорта:</label>
         <input name="serialPassport" id="serialPassport" type="number">
+    </div>
+
+     
+
+    <div class="form-group">
+        <label for="passportIssuedBy">Кем выдан:</label>
+        <textarea name="passportIssuedBy" id="passportIssuedBy" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="passportIssuedBy">Когда выдан:</label>
+        <textarea name="passportDate" id="passportDate" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Адрес:</label>
+        <textarea name="address" id="address" rows="3"></textarea>
+    </div>
+
+
 
         <button type="submit">Отправить</button>
     </form>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>{{ controller_path }}</code></li>
-            <li>Your template at <code>{{ template_path }}</code></li>
-    </ul>
+   
 </div>
 {% endblock %}
