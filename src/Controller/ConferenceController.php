@@ -21,7 +21,7 @@ class ConferenceController extends AbstractController
       
         ]);
     }
-
+    
     #[Route('/submit', name: 'handle_form', methods: ['POST'])]
     public function handleForm(Request $request): Response
     {
@@ -29,12 +29,14 @@ class ConferenceController extends AbstractController
         $secondName = $request->request->get('secondName');
         $thirdName = $request->request->get('thirdName');
         $age = $request->request->get('age');
+        
+     
 
         // Здесь можно сделать обработку, например, сохранение данных в базе данных
 
         return new Response("Принято: Имя - $name, Возраст - $age");
     }
-
+    
     #[Route('/', name: 'homepage')]
     public function index(): Response
     {
