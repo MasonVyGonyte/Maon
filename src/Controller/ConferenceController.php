@@ -47,7 +47,7 @@ $address = $request->request->get('address');
         $session->set('passportIssuedBy', $passportIssuedBy);
         $session->set('passportDate', $passportDate);
         $session->set('address', $address);
-        // Здесь можно сделать обработку, например, сохранение данных в базе данных
+        
 
         return new Response("Принято: Имя - $name, Возраст - $age");
     }
