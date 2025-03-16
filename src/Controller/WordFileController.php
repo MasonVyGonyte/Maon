@@ -29,7 +29,7 @@ $passportDate = $session->get('passportDate');
 $address = $session->get('address');
      
        
-        $templatePath = $this->getParameter('kernel.project_dir') . '/public/templates/Text1.docx';
+        $templatePath = $this->getParameter('kernel.project_dir') . '/public/templates/M1.docx';
 
         //существует ли файл
         if (!file_exists($templatePath)) {

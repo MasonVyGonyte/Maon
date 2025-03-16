@@ -9,13 +9,7 @@
 
         {% endblock %}
 
-        {% block javascripts %}
-         
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-            <script src="{{ asset('js/hidden.js') }}"></script>
-            
         
-        {% endblock %}
     </head>
  
 
@@ -25,4 +19,12 @@
          
         
     </body>
+    {% block javascripts %}
+         
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+            <script src="{{ asset('js/hidden.js') }}"></script>
+            
+             <script src="{{ asset('js/new.js') }}"></script>
+        {% endblock %}
+    
 </html>  
