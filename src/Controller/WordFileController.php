@@ -16,13 +16,19 @@ class WordFileController extends AbstractController
     public function generateWord(Request $request): Response
     {
         // Получаем значения из POST-запроса (полей формы)
-      
+        $session = $request->getSession();
+        $name = $session->get('name');
+        $secondName = $session->get('secondName');
+        $thirdName = $session->get('thirdName');
+        $age = $session->get('age');
+        
+        $numberPassport = $session->get('numberPassport');
+        $serialPassport = $session->get('serialPassport');
+        $passportIssuedBy = $session->get('passportIssuedBy');
+        $passportDate = $session->get('passportDate');
+        $address = $session->get('address');
        
-        $name = $request->request->get('name');
-        $secondName = $request->request->get('secondName');
-        $thirdName = $request->request->get('thirdName');
-        $age = $request->request->get('age');
-        var_dump($_POST); 
+       
         
         if (!$name ) {
             return new Response("Ошибка: данные не были переданы.");
@@ -37,6 +43,12 @@ class WordFileController extends AbstractController
         $section->addText("Отчество: $thirdName");
         $section->addText("Возраст: $age");
         
+        $section->addText("Номер паспорта: $numberPassport");
+$section->addText("Серия паспорта: $serialPassport");
+$section->addText("Кем выдан: $passportIssuedBy");
+$section->addText("Когда выдан: $passportDate");
+$section->addText("Адрес: $address");
+
         // Сохраняем документ во временный файл
         $tempFile = tempnam(sys_get_temp_dir(), 'word_') . '.docx';
         $phpWord->save($tempFile);

@@ -26,16 +26,32 @@ class ConferenceController extends AbstractController
     public function handleForm(Request $request): Response
     {
         $name = $request->request->get('name');
-        $secondName = $request->request->get('secondName');
-        $thirdName = $request->request->get('thirdName');
-        $age = $request->request->get('age');
-        
-     
+$secondName = $request->request->get('secondName');
+$thirdName = $request->request->get('thirdName');
+$age = $request->request->get('age');
 
+$numberPassport = $request->request->get('numberPassport');
+$serialPassport = $request->request->get('serialPassport');
+$passportIssuedBy = $request->request->get('passportIssuedBy');
+$passportDate = $request->request->get('passportDate');
+$address = $request->request->get('address');
+
+
+        $session = $request->getSession();
+        $session->set('name', $name);
+        $session->set('secondName', $secondName);
+        $session->set('thirdName', $thirdName);
+        $session->set('age', $age);
+        $session->set('numberPassport', $numberPassport);
+        $session->set('serialPassport', $serialPassport);
+        $session->set('passportIssuedBy', $passportIssuedBy);
+        $session->set('passportDate', $passportDate);
+        $session->set('address', $address);
         // Здесь можно сделать обработку, например, сохранение данных в базе данных
 
         return new Response("Принято: Имя - $name, Возраст - $age");
     }
+    
     
     #[Route('/', name: 'homepage')]
     public function index(): Response

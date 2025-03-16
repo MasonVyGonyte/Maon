@@ -40,9 +40,21 @@
     </div>
 
     <div class="form-group">
+        <label for="secondName">Фамилия:</label>
+        <input name="secondName" id="secondName" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="thirdName">Отчество:</label>
+        <input name="thirdName" id="thirdName" type="text">
+    </div>
+
+    <div class="form-group">
         <label for="age">Возраст:</label>
         <input name="age" id="age" type="number">
     </div>
+
+    
 
     <div class="form-group">
         <label for="numberPassport">Номер паспорта:</label>
@@ -73,16 +85,16 @@
     </div>
 
     
-
+<a href="{{ path('generate_word') }}"  >
+    <button>Скачать Word-документ</button>
+    </a>
 
 
    
 
         <button type="submit">Отправить</button>
     </form>
- <a href="{{ path('generate_word') }}"  >
-    <button>Скачать Word-документ</button>
-    </a>
+ 
    
 </div>
 {% endblock %}
