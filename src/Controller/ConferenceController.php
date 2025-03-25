@@ -49,7 +49,8 @@ $address = $request->request->get('address');
         $session->set('address', $address);
         
 
-        return new Response("Принято: Имя - $name, Возраст - $age");
+        return new Response(' ', 204);
+        
     }
     
     

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ConferenceController!{% endblock %}
+{% block title %}{% endblock %}
 
 {% block stylesheets %}
     <style>
@@ -17,10 +17,24 @@
     border: none;
 }
 
+  
+
 #downloadBtn:enabled {
     background-color: green;
     cursor: pointer;
 }
+
+button[type="submit"] {
+  /*   background-color: red; Серый фон для заблокированной кнопки */
+    cursor: pointer; /* Указатель мыши в виде запрещённого знака */
+}
+button[type="submit"]:disabled {
+    background-color: gray; /* Серый фон для заблокированной кнопки */
+    cursor: not-allowed; /* Указатель мыши в виде запрещённого знака */
+}
+
+
+
     </style>
     
 {% endblock %}
@@ -32,9 +46,18 @@
 
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1></h1>
 
  <p id="toggleText">Этот текст будет скрываться и появляться.</p>
+ <p id="output"></p>
+    
+
+      {# Показываем сообщение об успехе, если оно есть #}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
     
     <form action="{{ path('handle_form') }}" method="post" class="grid-form">
 
@@ -112,9 +135,61 @@
 
         <button type="submit">Отправить</button>
     </form>
- 
-   
 </div>
+ <div class="modal fade" id="agreementModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Пользовательское соглашение</h5>
+                    
+                </div>
+                <div class="modal-body" id="agreement-text">
+                    <!-- Текст соглашения будет вставлен через JavaScript -->
+                </div>
+                <div class="modal-footer">
+                      <label class="toggle-switch">
+                            <input type="checkbox" id="toggleCheckbox1" />
+                            <span class="slider"></span>
+                        </label>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <!-- Подключаем jQuery и Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Скрипт для управления согласием -->
+    <script>
+        
+        // Вставка текста пользовательского соглашения
+        document.getElementById('agreement-text').innerHTML = `
+            <h2>Пользовательское соглашение</h2>
+<p>Настоящим документом Вы свободно, своей волей и в своем интересе в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и Гражданским кодексом Российской Федерации даете МОО "Спецвзвод" (115211, город Москва, Каширское ш., д. 55 к. 3, кв. 665 , ИНН 7724333247, ОГРН 1157700014669) (далее – Организация) сознательное, информированное согласие на обработку Ваших персональных данных, а именно:</p>
+
+<ul>
+    <li>паспортные данные;</li>
+    <li>анкетные данные;</li>
+    <li>данные иных документов, которые с учетом специфики деятельности Организации и в соответствии с законодательством Российской Федерации должны быть предъявлены мною;</li>
+    <li>данные договора о членства и приложений к нему;</li>
+    <li>фотографии;</li>
+    <li>иные сведения обо мне, которые необходимо для корректного документального оформления правоотношений между мною и Организацией.</li>
+</ul>
+
+<p>Указанные персональные данные будут использоваться для достижения уставных целей деятельности Организации.</p>
+
+<p>Настоящее согласие действует со дня акцепта в течение 12 месяцев или до момента отзыва настоящего согласия.</p>
+
+        `;
+    </script>
+
+   
+
 {% endblock %}
 
 
