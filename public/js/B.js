@@ -18,9 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (allFilled) {
            
            submitBtn.disabled = false;
+           downloadBtn.disabled = true;
          
           
         } else {
+            
             downloadBtn.disabled = true;
             
             submitBtn.disabled = true;
@@ -43,18 +45,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     submitBtn.addEventListener('click', function() {
         // e.preventDefault(); // Если нужно предотвратить отправку формы
-        form.submit();
+        //form.submit();
         submitBtn.disabled = true;
         downloadBtn.disabled = false;
        
     });
-    fields.forEach(function (field) {
-        field.addEventListener('input', function () {
-            if (submitBtn.disabled===false){ //checkform мешает нормальной работе (меняет при изменении полей submitBtn.disabled на false )
-                downloadBtn.disabled = true;
-            }
-        });
-    });
+  
 checkForm();
 
 });
