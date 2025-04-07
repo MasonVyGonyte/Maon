@@ -3,13 +3,15 @@
 security:
     password_hashers:
         App\Entity\User:
-            algorithm: bcrypt
+            algorithm: auto
+
 
     providers:
         app_user_provider:
             entity:
                 class: App\Entity\User
                 property: username
+        # used to reload user from session & other features (e.g. switch_user)
 
     firewalls:
         # Для страницы логина
@@ -17,17 +19,22 @@ security:
             pattern: ^/kab$
             security: false
 
+        public:
+            pattern: ^/register$
+            security: false
+
         # Главная страница с аутентификацией
         main:
             pattern: ^/
-            form_login:
-                login_path: show_kab
-                check_path: show_kab
-                default_target_path: home
-            logout:
-                path: app_logout
-                target: show_kab
+            security: false
+           # form_login:
+          #      login_path: show_kab
+          #      check_path: show_kab
+          #      default_target_path: home
+           # logout:
+            #    path: app_logout
+             #   target: show_kab
 
-    access_control:
-        - { path: ^/kab, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, roles: ROLE_USER }
+   # access_control:
+      #  - { path: ^/kab, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+     #   - { path: ^/, roles: ROLE_USER } 
