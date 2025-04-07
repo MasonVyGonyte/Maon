@@ -1,13 +1,13 @@
-console.log("hidden.js загружен!");
+console.log("hidden.js загружен");
 
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleCheckbox = document.getElementById("toggleCheckbox");
+    const toggleCheckbox1 = document.getElementById("toggleCheckbox1");
     const textElement = document.getElementById("toggleText");
 
-    if (!toggleCheckbox) {
-        console.error("❌ Не найден элемент #toggleCheckbox");
+    if (!toggleCheckbox1) {
+        console.error("❌ Не найден элемент #toggleCheckbox1");
     } else {
-        console.log("✅ Найден #toggleCheckbox");
+        console.log("✅ Найден #1");
     }
 
     if (!textElement) {

@@ -3,8 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
     const fields = form.querySelectorAll('input[type="text"], input[type="number"], textarea');
     const submitBtn = form.querySelector('button[type="submit"]'); 
-
-
+    const toggleCheckbox1 = document.getElementById("toggleCheckbox1");
+    toggleCheckbox1?.addEventListener("change", checkForm)
+        
+    
+    if (toggleCheckbox1) {
+        console.log("Элемент с id 'toggleCheckbox1'  найден!");
+    }
     submitBtn.disabled = false;
     downloadBtn.disabled = false;
     function checkForm() {
@@ -15,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        if (allFilled) {
+        if (allFilled&& toggleCheckbox1.checked ) {
            
            submitBtn.disabled = false;
            downloadBtn.disabled = true;
@@ -32,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
    
 
     fields.forEach(function (field) {
-        field.addEventListener('input', checkForm); // Каждый раз при изменении поля проверяем форму (та строка что мешает, хотя по факту все норм работает просто надо учитывать что эта строка делает кнопку сабмит активной поэтому и условие такое странное в 52 строке)
-    });
+        field.addEventListener('input', checkForm); 
+        });
 
    
     downloadBtn.addEventListener('click', function() {

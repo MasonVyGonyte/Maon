@@ -35,7 +35,12 @@ button[type="submit"]:disabled {
     background-color: gray; /* Серый фон для заблокированной кнопки */
     cursor: not-allowed; /* Указатель мыши в виде запрещённого знака */
 }
-
+#logoutButton {
+        position: absolute;  /* Используем абсолютное позиционирование */
+        top: 10px;           /* Сдвигаем кнопку на 10px от верхнего края */
+        right: 10px;         /* Сдвигаем кнопку на 10px от правого края */
+        z-index: 10;         /* Убедитесь, что кнопка будет поверх других элементов */
+    }
 
 
     </style>
@@ -137,6 +142,10 @@ button[type="submit"]:disabled {
    
 
         <button type="submit">Отправить</button>
+    </form>
+
+    <form action="{{ path('app_logout') }}" method="post">
+        <button type="submit" id="logoutButton"> Выход</button>
     </form>
 </div>
  <div class="modal fade" id="agreementModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

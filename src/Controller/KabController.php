@@ -13,15 +13,17 @@ class KabController extends AbstractController
     public function loginAction(Request $request, AuthenticationUtils $authenticationUtils)
     {
         // Получаем ошибку логина, если она есть
-        $error = $authenticationUtils->getLastAuthenticationError();
-
-        // Получаем последнее имя пользователя, введенное пользователем
-        $lastUsername = $authenticationUtils->getLastUsername();
+    
 
         return $this->render('conference/kab.html.twig', [
             'last_username' => $lastUsername,
             'error' => $error,
         ]);
+    }
+
+    #[Route('/logout', name: 'app_logout')]
+    public function logout()
+    {
     }
 }
 

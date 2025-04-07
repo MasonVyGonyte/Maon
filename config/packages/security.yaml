@@ -27,14 +27,16 @@ security:
         main:
             pattern: ^/
             security: false
-           # form_login:
-          #      login_path: show_kab
-          #      check_path: show_kab
-          #      default_target_path: home
-           # logout:
-            #    path: app_logout
-             #   target: show_kab
+            form_login:
+                login_path: show_kab
+                check_path: show_kab
+                username_parameter: username
+                password_parameter: password
+                default_target_path: home
+            logout:
+                path: app_logout
+                target: show_kab
 
-   # access_control:
-      #  - { path: ^/kab, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-     #   - { path: ^/, roles: ROLE_USER } 
+    access_control:
+        - { path: ^/kab, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_USER } 
