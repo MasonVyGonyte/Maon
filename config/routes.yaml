@@ -4,6 +4,9 @@ controllers:
         namespace: App\Controller
     type: attribute
 
+show_kab:
+    path: /kab
+    controller: App\Controller\KabController::loginAction
 
 
 

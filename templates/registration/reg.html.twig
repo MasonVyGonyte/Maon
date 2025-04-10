@@ -12,7 +12,7 @@
 <div class="example-wrapper">
     <h1>Registration</h1>
 
-<form action="{{ path('app_reg') }}" method="post", class="grid-form">
+<form action="{{ path('app_reg') }}" method="post" class="grid-form">
 
     <label for="username">Логин:</label>
     <input type="text" id="username" name="username" value="{{ last_username }}" />
@@ -27,6 +27,7 @@
     <input type="password" id="password1" name="password1" />
  
     <button type="submit">Зарегистрироваться</button>
+</form>
 
 {% endblock %}
 

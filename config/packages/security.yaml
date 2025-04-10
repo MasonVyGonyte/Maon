@@ -1,42 +1,36 @@
-# config/packages/security.yaml
 
 security:
     password_hashers:
         App\Entity\User:
             algorithm: auto
 
-
     providers:
         app_user_provider:
             entity:
                 class: App\Entity\User
                 property: username
-        # used to reload user from session & other features (e.g. switch_user)
-
     firewalls:
-        # Для страницы логина
         login:
             pattern: ^/kab$
-            security: false
+            security: false  
 
         public:
             pattern: ^/register$
-            security: false
+            security: false  
 
-        # Главная страница с аутентификацией
         main:
             pattern: ^/
-            security: false
             form_login:
                 login_path: show_kab
                 check_path: show_kab
                 username_parameter: username
                 password_parameter: password
-                default_target_path: home
+                default_target_path: show_conference
             logout:
                 path: app_logout
                 target: show_kab
 
     access_control:
-        - { path: ^/kab, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, roles: ROLE_USER } 
+        - { path: ^/kab, roles: IS_AUTHENTICATED_ANONYMOUSLY }   
+        - { path: ^/conference, roles: IS_AUTHENTICATED_ANONYMOUSLY } 
+

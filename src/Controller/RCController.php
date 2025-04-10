@@ -24,7 +24,7 @@ final class RCController extends AbstractController
         if ($request->isMethod('POST')) {
             $username = $request->request->get('username');
             $plainPassword = $request->request->get('password');
-            $plainPassword1 = $request->request->get('password1');
+            $plainPassword1 = $request->request->get('passAgain');
 
             $user = new User();
             $user->setUsername($username);
@@ -36,7 +36,10 @@ final class RCController extends AbstractController
             $hashedPassword1 = $passwordHasher->hashPassword($user, $plainPassword1);
             $user->setPassword1($hashedPassword1);
 
-            $em->persist($user);
+           // dump($request->request->all());
+           // die();
+            
+           $em->persist($user);
             $em->flush();
 
             return $this->redirectToRoute('show_kab'); // после регистрации — на логин
