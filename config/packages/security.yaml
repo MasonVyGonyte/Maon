@@ -1,4 +1,3 @@
-
 security:
     password_hashers:
         App\Entity\User:
@@ -10,16 +9,10 @@ security:
                 class: App\Entity\User
                 property: username
     firewalls:
-        login:
-            pattern: ^/kab$
-            security: false  
-
-        public:
-            pattern: ^/register$
-            security: false  
+       
 
         main:
-            pattern: ^/
+            
             form_login:
                 login_path: show_kab
                 check_path: show_kab
@@ -31,6 +24,7 @@ security:
                 target: show_kab
 
     access_control:
-        - { path: ^/kab, roles: IS_AUTHENTICATED_ANONYMOUSLY }   
-        - { path: ^/conference, roles: IS_AUTHENTICATED_ANONYMOUSLY } 
+        - { path: ^/kab, role: PUBLIC_ACCESS }
+        - { path: ^/conference, roles: ROLE_USER } 
+        
 
