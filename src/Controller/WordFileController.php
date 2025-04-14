@@ -36,7 +36,7 @@ $address = $session->get('address');
             return new Response("Ошибка: шаблон не найден.");
         }
         if (!$name) {
-            return new Response("тен тейма");
+            return new Response("нет данных для скачиваня");
         }
        
         $templateProcessor = new TemplateProcessor($templatePath);
