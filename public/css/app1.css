@@ -3,6 +3,8 @@ body {
     background-size: 100%;
 }
 
+
+
 .grid-form {
     position: fixed; /* Фиксированное положение */
     top: 50%; /* Смещение вниз на 50% экрана */
@@ -16,6 +18,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    
 }
 textarea {
     resize: none;
@@ -102,6 +105,7 @@ textarea {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 1.2);
+    
 }
 
 .form-group {
@@ -147,7 +151,12 @@ button:hover {
     body {
         overflow-y: auto;  /* Разрешаем вертикальную прокрутку */
     }
-
+    .container {
+        
+        flex-direction: column;  /* Элементы будут располагаться по вертикали */
+        gap: 4000px;  /* Отступ между гридом и модальным окном */
+        padding: 20px;
+      }
     .grid-form {
         width: 90%;  /* Форма будет занимать 90% ширины экрана */
         max-width: 700px;  /* Ограничиваем максимальную ширину */
@@ -164,20 +173,20 @@ button:hover {
         transform: translateX(-50%); /* Центрируем модальное окно */
         position: absolute;  /* Абсолютное позиционирование для мобильных */
         z-index: 2;  /* Модальное окно будет поверх формы */
-        font-size: 18px;
+        font-size: 21px;
     }
 
     label {
         font-size: 27px;
     }
-    
+
     input, textarea {
         padding: 18px;  /* Увеличиваем размер полей */
         font-size: 27px;  /* Увеличиваем шрифт */
     }
 
     button {
-        padding: 15px;  /* Увеличиваем размер кнопок */
-        font-size: 18px; /* Увеличиваем шрифт */
+        padding: 18px;  /* Увеличиваем размер кнопок */
+        font-size: 27px; /* Увеличиваем шрифт */
     }
 }

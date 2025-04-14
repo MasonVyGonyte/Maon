@@ -50,7 +50,9 @@ button[type="submit"]:disabled {
             {{ message }}
         </div>
     {% endfor %}
-    
+
+    <div class="container">
+
     <form action="{{ path('handle_form') }}" method="post" class="grid-form">
 
    
@@ -126,10 +128,8 @@ button[type="submit"]:disabled {
         <button type="submit">Отправить</button>
     </form>
 
-    <form action="{{ path('app_logout') }}" method="post">
-        <button type="submit" id="logoutButton"> Выход</button>
-    </form>
-</div>
+    
+
  <div class="modal fade" id="agreementModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -149,9 +149,12 @@ button[type="submit"]:disabled {
             </div>
             
         </div>
+    
     </div>
 
-
+<form action="{{ path('app_logout') }}" method="post">
+        <button type="submit" id="logoutButton"> Выход</button>
+    </form>
 
     <!-- Подключаем jQuery и Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
