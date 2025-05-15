@@ -32,8 +32,8 @@ textarea {
 .modal-dialog {
    
     
-    max-width: 1000px;  /* Увеличиваем ширину окна */
-    width: 90%;        /* Чтобы окно было адаптивным */
+    max-width: 1200px;  /* Увеличиваем ширину окна */
+    width: 120%;        /* Чтобы окно было адаптивным */
     background-color: #f8f9fa; /* Светлый фон для окна */
     border-radius: 10px; /* Скругленные углы */
     place-items: center;
@@ -63,30 +63,31 @@ textarea {
     word-wrap: break-word; 
 }
 
+.modal-footer 
+{
+    background-color: #97c6dd;
+    padding: 1vw;
+    gap: 1vw;
 
+}
+
+label
+{
+    z-index: 9999;
+}
 .modal-footer .toggle-switch {
     
-    bottom: 10px;   
-    left: 50%;
-    transform: translateX(-50%);   
+    bottom: 0px;   
+    
+    
   
     background-color: transparent; /* Сделаем фон прозрачным для самого тумблера */
     padding: 0; /* Убираем padding у самого тумблера */
     border-radius: 10px; /* Скругленные углы */
+    z-index: -0; /* Помещаем фон под тумблер */
    
 }
 
-.modal-footer .toggle-switch::before {
-    content: '';
-    position: absolute;
-    top: -5px; /* Отступ сверху */
-    left: -9vw; /* Отступ слева */
-    right: -9vw; /* Отступ справа */
-    bottom: -5px; /* Отступ снизу */
-    background-color: #a7a7a7; /* Фон вокруг тумблера */
-    border-radius: 15px; /* Скругленные углы фона */
-    z-index: -1; /* Помещаем фон под тумблер */
-}
 
 
 
