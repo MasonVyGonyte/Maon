@@ -4,12 +4,17 @@ body {
 }
 
 
-
-.grid-form {
-    position: fixed; /* Фиксированное положение */
+.container
+{
     top: 50%; /* Смещение вниз на 50% экрана */
     left: 20%; /* Смещение вправо на 50% экрана */
-    transform: translate(-50%, -50%); /* Центрируем относительно самого себя */
+    display: grid;
+    gap: 54px;
+}
+.grid-form {
+   
+   
+    
     display: grid;
     gap: 15px; /* Расстояние между полями */
     place-items: center;
@@ -25,9 +30,8 @@ textarea {
 }
 
 .modal-dialog {
-    position: fixed; /* Фиксированное положение */
-    top: 5%; /* Смещение вниз на 50% экрана */
-    left: 40%; /* Смещение вправо на 50% экрана */
+   
+    
     max-width: 1000px;  /* Увеличиваем ширину окна */
     width: 90%;        /* Чтобы окно было адаптивным */
     background-color: #f8f9fa; /* Светлый фон для окна */
@@ -61,7 +65,7 @@ textarea {
 
 
 .modal-footer .toggle-switch {
-    position: absolute;
+    
     bottom: 10px;   
     left: 50%;
     transform: translateX(-50%);   
@@ -76,8 +80,8 @@ textarea {
     content: '';
     position: absolute;
     top: -5px; /* Отступ сверху */
-    left: -900%; /* Отступ слева */
-    right: -900%; /* Отступ справа */
+    left: -9vw; /* Отступ слева */
+    right: -9vw; /* Отступ справа */
     bottom: -5px; /* Отступ снизу */
     background-color: #a7a7a7; /* Фон вокруг тумблера */
     border-radius: 15px; /* Скругленные углы фона */

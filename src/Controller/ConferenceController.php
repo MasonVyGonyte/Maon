@@ -49,7 +49,7 @@ $address = $request->request->get('address');
         $session->set('address', $address);
         
 
-        return $this->redirectToRoute('generate_word');
+        return $this->redirectToRoute('generate_word');      
         
     }
     
