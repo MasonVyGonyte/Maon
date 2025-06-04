@@ -84,22 +84,22 @@ button[type="submit"]:disabled {
 
     <form action="{{ path('handle_form') }}" method="post" class="grid-form">
 
+    <label for="document_type">Выберите документ:</label>
+    <label><input type="radio" name="document_type" value="doc1" checked> Договор о членстве</label>
+    <label><input type="radio" name="document_type" value="doc2"> доп несовершеннолетние</label>
+    <label><input type="radio" name="document_type" value="doc3"> Доп.соглашение об оплате</label>
+    <label><input type="radio" name="document_type" value="doc4"> Анкета оздоровье и характере ребёнка</label>
+    
    
 
-<label for = "toggle-switch">Я представитель(родитель или опекун):</label>
 
-      <label class="toggle-switch">
-        <input type="checkbox"  id="toggleCheckbox" />
-        <span class="slider">
-        </span>
-    </label>
     
     
 
 
-
+    <div id="doc1_fields" class="doc_fields">
        <div class="form-group">
-        <label for="name">Имя:</label>
+        <label for="name">Имя1:</label>
         <input name="name" id="name" type="text">
     </div>
 
@@ -118,7 +118,52 @@ button[type="submit"]:disabled {
         <input name="age" id="age" type="number">
     </div>
 
-    
+    <div class="form-group">
+        <label for="numberPassport">Номер паспорта:</label>
+        <input name="numberPassport" id="numberPassport" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="serialPassport">Серия паспорта:</label>
+        <input name="serialPassport" id="serialPassport" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="passportIssuedBy">Кем выдан:</label>
+        <textarea name="passportIssuedBy" id="passportIssuedBy" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">     
+        <label for="passportDate">Когда выдан:</label>
+        <textarea name="passportDate" id="passportDate" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Адрес:</label>
+        <textarea name="address" id="address" rows="3"></textarea>
+    </div>
+    </div>
+
+    <div id="doc2_fields" class="doc_fields" style="display:none;" >
+       <div class="form-group">
+        <label for="name">Имя2:</label>
+        <input name="name" id="name" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="secondName">Фамилия:</label>
+        <input name="secondName" id="secondName" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="thirdName">Отчество:</label>
+        <input name="thirdName" id="thirdName" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Возраст:</label>
+        <input name="age" id="age" type="number">
+    </div>
 
     <div class="form-group">
         <label for="numberPassport">Номер паспорта:</label>
@@ -130,25 +175,115 @@ button[type="submit"]:disabled {
         <input name="serialPassport" id="serialPassport" type="number">
     </div>
 
-     
-
     <div class="form-group">
         <label for="passportIssuedBy">Кем выдан:</label>
         <textarea name="passportIssuedBy" id="passportIssuedBy" rows="3"></textarea>
     </div>
 
-    <div class="form-group">
-        
-<label for="passportDate">Когда выдан:</label>
-<textarea name="passportDate" id="passportDate" rows="3"></textarea>
+    <div class="form-group">     
+        <label for="passportDate">Когда выдан:</label>
+        <textarea name="passportDate" id="passportDate" rows="3"></textarea>
     </div>
 
     <div class="form-group">
         <label for="address">Адрес:</label>
         <textarea name="address" id="address" rows="3"></textarea>
     </div>
+    </div>
 
-    
+    <div id="doc3_fields" class="doc_fields" style="display:none;" >
+       <div class="form-group">
+        <label for="name">Имя3:</label>
+        <input name="name" id="name" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="secondName">Фамилия:</label>
+        <input name="secondName" id="secondName" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="thirdName">Отчество:</label>
+        <input name="thirdName" id="thirdName" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Возраст:</label>
+        <input name="age" id="age" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="numberPassport">Номер паспорта:</label>
+        <input name="numberPassport" id="numberPassport" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="serialPassport">Серия паспорта:</label>
+        <input name="serialPassport" id="serialPassport" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="passportIssuedBy">Кем выдан:</label>
+        <textarea name="passportIssuedBy" id="passportIssuedBy" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">     
+        <label for="passportDate">Когда выдан:</label>
+        <textarea name="passportDate" id="passportDate" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Адрес:</label>
+        <textarea name="address" id="address" rows="3"></textarea>
+    </div>
+    </div>
+
+    <div id="doc4_fields" class="doc_fields" style="display:none;" >
+       <div class="form-group">
+        <label for="name">Имя4:</label>
+        <input name="name" id="name" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="secondName">Фамилия:</label>
+        <input name="secondName" id="secondName" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="thirdName">Отчество:</label>
+        <input name="thirdName" id="thirdName" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Возраст:</label>
+        <input name="age" id="age" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="numberPassport">Номер паспорта:</label>
+        <input name="numberPassport" id="numberPassport" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="serialPassport">Серия паспорта:</label>
+        <input name="serialPassport" id="serialPassport" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="passportIssuedBy">Кем выдан:</label>
+        <textarea name="passportIssuedBy" id="passportIssuedBy" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">     
+        <label for="passportDate">Когда выдан:</label>
+        <textarea name="passportDate" id="passportDate" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="address">Адрес:</label>
+        <textarea name="address" id="address" rows="3"></textarea>
+    </div>
+    </div>
 
 
 
