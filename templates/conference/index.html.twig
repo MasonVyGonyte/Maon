@@ -86,9 +86,11 @@ button[type="submit"]:disabled {
 
     <label for="document_type">Выберите документ:</label>
     <label><input type="radio" name="document_type" value="doc1" checked> Договор о членстве</label>
-    <label><input type="radio" name="document_type" value="doc2"> доп несовершеннолетние</label>
-    <label><input type="radio" name="document_type" value="doc3"> Доп.соглашение об оплате</label>
-    <label><input type="radio" name="document_type" value="doc4"> Анкета оздоровье и характере ребёнка</label>
+    <label><input type="radio" name="document_type" value="doc2"> Договор о членстве, но я опекун</label>
+    <label><input type="radio" name="document_type" value="doc3"> Доп. несовершеннолетние без паспорта</label>
+    <label><input type="radio" name="document_type" value="doc4"> Доп. несовершеннолетние с паспортом</label>
+    <label><input type="radio" name="document_type" value="doc5"> Доп. соглашение об оплате</label>
+    <label><input type="radio" name="document_type" value="doc6"> Анкета о здоровье и характере ребёнка</label>
     
    <div id="doc1_fields" class="doc_fields">
 <div class="form-group">
@@ -254,9 +256,75 @@ button[type="submit"]:disabled {
         <input name="email3" id="email3" type="text">
     </div>
 
-    
+    </div>
 
- 
+     <div id="doc3_fields" class="doc_fields">
+
+
+       <div class="form-group">
+         <label for="name4">Имя представителя:</label>
+         <input name="name4" id="name4" type="text">
+        </div>
+
+    <div class="form-group">
+        <label for="secondName4">Фамилия представителя:</label>
+        <input name="secondName4" id="secondName4" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="thirdName4">Отчество представителя:</label>
+        <input name="thirdName4" id="thirdName4" type="text">
+    </div>
+
+    <div class="form-group">
+         <label for="name5">Имя несовершеннолетнего:</label>
+         <input name="name5" id="name5" type="text">
+        </div>
+
+    <div class="form-group">
+        <label for="secondName5">Фамилия несовершеннолетнего:</label>
+        <input name="secondName5" id="secondName5" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="thirdName5">Отчество несовершеннолетнего:</label>
+        <input name="thirdName5" id="thirdName5" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="bday">Дата рождения:</label>
+        <input name="bday" id="bday" type="text">
+    </div>
+
+     <div class="form-group">
+        <label for="blocation">Место рождения:</label>
+        <input name="blocation" id="blocation" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="serialSvid">Серия свидетельства:</label>
+        <input name="serialSvid" id="serialSvid" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="numSvid>Номер свидетельства:</label>
+        <input name="numSvid" id="numSvid" type="number">
+    </div>
+
+    <div class="form-group">
+        <label for="svidIssuedBy">Кем выдано:</label>
+        <textarea name="svidIssuedBy" id="svidIssuedBy" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">     
+        <label for="svidDate">Когда выдано:</label>
+        <textarea name="svidDate" id="svidDate" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="address4">Адрес регистрации:</label>
+        <textarea name="address4" id="address4" rows="3"></textarea>
+    </div>
     </div>
 
         <button type="submit">Отправить</button>
