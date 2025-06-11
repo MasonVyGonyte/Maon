@@ -85,6 +85,19 @@ $svidIssuedBy = $request->request->get('svidIssuedBy');
 $svidDate = $request->request->get('svidDate');
 $address4 = $request->request->get('address4');
 
+$name6 = $request->request->get('name6');
+$secondName6 = $request->request->get('secondName6');
+$thirdName6 = $request->request->get('thirdName6');
+$bday2 = $request->request->get('bday2');
+$numberPassport4 = $request->request->get('numberPassport4');
+$serialPassport4 = $request->request->get('serialPassport4');
+$passportIssuedBy4 = $request->request->get('passportIssuedBy4');
+$passportDate4 = $request->request->get('passportDate4');
+$codeDep = $request->request->get('codeDep');
+$address5 = $request->request->get('address5');
+$phone4 = $request->request->get('phone4');
+$email4 = $request->request->get('email4');
+
     // Получаем сессию
     $session = $request->getSession();
 
@@ -140,6 +153,21 @@ $session->set('numSvid', $numSvid);
 $session->set('svidIssuedBy', $svidIssuedBy);
 $session->set('svidDate', $svidDate);
 $session->set('address4', $address4);
+
+// Сохраняем значения в сессию
+$session->set('name6', $name6);
+$session->set('secondName6', $secondName6);
+$session->set('thirdName6', $thirdName6);
+$session->set('bday2', $bday2);
+$session->set('numberPassport4', $numberPassport4);
+$session->set('serialPassport4', $serialPassport4);
+$session->set('passportIssuedBy4', $passportIssuedBy4);
+$session->set('passportDate4', $passportDate4);
+$session->set('codeDep', $codeDep);
+$session->set('address5', $address5);
+$session->set('phone4', $phone4);
+$session->set('email4', $email4);
+
 
     // Сохраняем document_type в сессии
     $session->set('document_type', $documentType);

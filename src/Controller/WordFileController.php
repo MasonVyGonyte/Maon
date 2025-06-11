@@ -75,6 +75,19 @@ $svidIssuedBy = $session->get('svidIssuedBy');
 $svidDate = $session->get('svidDate');
 $address4 = $session->get('address4');
 
+$name6 = $session->get('name6');
+$secondName6 = $session->get('secondName6');
+$thirdName6 = $session->get('thirdName6');
+$bday2 = $session->get('bday2');
+$numberPassport4 = $session->get('numberPassport4');
+$serialPassport4 = $session->get('serialPassport4');
+$passportIssuedBy4 = $session->get('passportIssuedBy4');
+$passportDate4 = $session->get('passportDate4');
+$codeDep = $session->get('codeDep');
+$address5 = $session->get('address5');
+$phone4 = $session->get('phone4');
+$email4 = $session->get('email4');
+
 // Обновляем шаблон для doc3
 
 
@@ -94,8 +107,8 @@ $address4 = $session->get('address4');
         if (!file_exists($templatePath)) {
             return new Response("Ошибка: шаблон не найден.");
         }
-        if (!$documentType) {
-            return new Response($documentType);
+        if (!$numberPassport4) {
+            return new Response($numberPassport4);
         }
        
         $templateProcessor = new TemplateProcessor($templatePath);
@@ -148,6 +161,21 @@ $templateProcessor->setValue('{{numSvid}}', $numSvid);
 $templateProcessor->setValue('{{svidIssuedBy}}', $svidIssuedBy);
 $templateProcessor->setValue('{{svidDate}}', $svidDate);
 $templateProcessor->setValue('{{address4}}', $address4);
+
+
+$templateProcessor->setValue('{{name6}}', $name6); // Имя
+$templateProcessor->setValue('{{secondName6}}', $secondName6); // Фамилия
+$templateProcessor->setValue('{{thirdName6}}', $thirdName6); // Отчество
+$templateProcessor->setValue('{{bday2}}', $bday2); // Дата рождения
+$templateProcessor->setValue('{{numberPassport4}}', $numberPassport4); // Номер паспорта
+$templateProcessor->setValue('{{serialPassport4}}', $serialPassport4); // Серия паспорта
+$templateProcessor->setValue('{{passportIssuedBy4}}', $passportIssuedBy4); // Кем выдан
+$templateProcessor->setValue('{{passportDate4}}', $passportDate4); // Когда выдан
+$templateProcessor->setValue('{{codeDep}}', $codeDep); // Код подразделения
+$templateProcessor->setValue('{{address5}}', $address5); // Адрес
+$templateProcessor->setValue('{{phone4}}', $phone4); // Номер телефона
+$templateProcessor->setValue('{{email4}}', $email4); // Email
+
 
 
      

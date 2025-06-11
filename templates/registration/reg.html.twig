@@ -10,7 +10,7 @@
 {% block body %}
 
 <div class="example-wrapper">
-    <h1>Registration</h1>
+    <h1></h1>
 
 <form action="{{ path('app_reg') }}" method="post" class="grid-form">
 
@@ -23,11 +23,21 @@
     <label for="passAgain">Пароль повторно:</label>
     <input type="password" id="passAgain" name="passAgain" />
 
-    <label for="password1">Ответ на вопрос для сброса пароля. Девичья фамилия бабушки: </label>
-    <input type="password" id="password1" name="password1" />
+    <p>Для сброса пароля обратитесь:</p>
+
  
     <button type="submit">Зарегистрироваться</button>
+
+
+
+
+    
 </form>
+
+<form action="{{ path('show_kab') }}" method="get">
+    <button id="loginRedirect">Перейти к авторизации</button>
+</form>
+
 
 {% endblock %}
 

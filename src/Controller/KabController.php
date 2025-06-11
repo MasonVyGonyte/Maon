@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Security;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class KabController extends AbstractController
 {
@@ -38,4 +39,14 @@ class KabController extends AbstractController
     {
         // Symfony автоматически обрабатывает этот маршрут
     }
+
+  
+
+#[Route('/logout1', name: 'register1')]
+public function RegRedirect(): RedirectResponse
+{
+    return $this->redirectToRoute('app_reg'); // Перенаправляем на страницу регистрации
+}
+
+
 }

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  
     const downloadBtn = document.getElementById('downloadBtn');
     const form = document.querySelector('form');
     const fields = form.querySelectorAll('input[type="text"], input[type="number"], textarea');
@@ -59,6 +60,8 @@ function getSelectedDocument() {
             submitBtn.disabled = true;    
         }    
     }
+
+    
 
     fields.forEach(function (field) {
         field.addEventListener('input', checkForm); 
