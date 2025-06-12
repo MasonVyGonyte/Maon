@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use PhpOffice\PhpWord\PhpWord;
-
+use PhpOffice\PhpWord\IOFactory;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
@@ -88,7 +88,11 @@ $address5 = $session->get('address5');
 $phone4 = $session->get('phone4');
 $email4 = $session->get('email4');
 
-// Обновляем шаблон для doc3
+   
+    $checkboxes = [];
+for ($i = 1; $i <= 19; $i++) {
+    $checkboxes['checkbox' . $i] = $session->get('checkbox' . $i);
+}
 
 
         $templates = [
@@ -102,15 +106,16 @@ $email4 = $session->get('email4');
        
         
         $templatePath = $this->getParameter('kernel.project_dir') . $templates[$documentType];
-
+        $phpWord = IOFactory::load($templatePath);
         //существует ли файл
         if (!file_exists($templatePath)) {
             return new Response("Ошибка: шаблон не найден.");
         }
-        if (!$numberPassport4) {
-            return new Response($numberPassport4);
-        }
+    // if (!$numberPassport4) {
+       //     return new Response($numberPassport4);
+       // }
        
+
         $templateProcessor = new TemplateProcessor($templatePath);
         
         $templateProcessor->setValue('{{name}}', $name);
@@ -177,6 +182,15 @@ $templateProcessor->setValue('{{phone4}}', $phone4); // Номер телефо�
 $templateProcessor->setValue('{{email4}}', $email4); // Email
 
 
+
+    for ($i = 1; $i <= 19; $i++) {
+    $templateProcessor->setValue("{{checkbox$i}}", $checkboxes['checkbox' . $i]);
+}
+
+
+
+
+ 
 
      
         $tempFile = tempnam(sys_get_temp_dir(), 'word_') . '.docx';

@@ -98,6 +98,15 @@ $address5 = $request->request->get('address5');
 $phone4 = $request->request->get('phone4');
 $email4 = $request->request->get('email4');
 
+$checkboxes = [];
+for ($i = 1; $i <= 19; $i++) {
+    $checkboxes['checkbox' . $i] = $request->request->get('checkbox' . $i) === 'on' ? '☑' : '□';
+}
+
+
+    
+
+
     // Получаем сессию
     $session = $request->getSession();
 
@@ -167,6 +176,21 @@ $session->set('codeDep', $codeDep);
 $session->set('address5', $address5);
 $session->set('phone4', $phone4);
 $session->set('email4', $email4);
+
+    for ($i = 1; $i <= 19; $i++) {
+    $checkbox = $request->request->get('checkbox' . $i) ? '☑' : '□';
+    $session->set('checkbox' . $i, $checkbox);
+}
+
+        $checkboxes = [];
+for ($i = 1; $i <= 19; $i++) {
+    $checkboxes['checkbox' . $i] = $session->get('checkbox' . $i);
+}
+
+// Выводим значения всех чекбоксов
+dump($checkboxes);
+
+exit();
 
 
     // Сохраняем document_type в сессии
