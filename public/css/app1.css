@@ -11,6 +11,26 @@ body {
     display: grid;
     gap: 24vw;
 }
+
+
+     .checkbox-group {
+    display: grid;
+    gap: 20px; /* Расстояние между парами чекбоксов */
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+.checkbox-group .form-group {
+    display: flex;
+    align-items: center; /* Центрируем чекбокс и текст по вертикали */
+    gap: 10px; /* Расстояние между текстом и чекбоксом */
+}
+
+/* Для чекбоксов */
+.checkbox-group .checkbox {
+    margin: 0; /* Убираем отступы вокруг чекбокса */
+}
+    
+    
 .grid-form {
    
    

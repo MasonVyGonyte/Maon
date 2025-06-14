@@ -94,6 +94,11 @@ for ($i = 1; $i <= 19; $i++) {
     $checkboxes['checkbox' . $i] = $session->get('checkbox' . $i);
 }
 
+$checkboxes2 = [];
+for ($i = 24; $i <= 46; $i++) {
+    $checkboxes2['checkbox' . $i] = $session->get('checkbox' . $i);
+}
+
 
         $templates = [
             'doc1' => '/public/templates/d1.docx',
@@ -185,6 +190,10 @@ $templateProcessor->setValue('{{email4}}', $email4); // Email
 
     for ($i = 1; $i <= 19; $i++) {
     $templateProcessor->setValue("{{checkbox$i}}", $checkboxes['checkbox' . $i]);
+}
+
+for ($i = 24; $i <= 46; $i++) {
+    $templateProcessor->setValue("{{checkbox$i}}", $checkboxes2['checkbox' . $i]);
 }
 
 

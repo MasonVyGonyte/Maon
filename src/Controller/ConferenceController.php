@@ -103,6 +103,11 @@ for ($i = 1; $i <= 19; $i++) {
     $checkboxes['checkbox' . $i] = $request->request->get('checkbox' . $i) === 'on' ? '☑' : '□';
 }
 
+$checkboxes2 = [];
+for ($i = 24; $i <= 46; $i++) {
+    $checkboxes2['checkbox' . $i] = $request->request->get('checkbox' . $i) === 'on' ? '☑' : '□';
+}
+
 
     
 
@@ -177,20 +182,30 @@ $session->set('address5', $address5);
 $session->set('phone4', $phone4);
 $session->set('email4', $email4);
 
-    for ($i = 1; $i <= 19; $i++) {
+    for ($i = 1; $i <= 23; $i++) {
     $checkbox = $request->request->get('checkbox' . $i) ? '☑' : '□';
     $session->set('checkbox' . $i, $checkbox);
 }
 
         $checkboxes = [];
-for ($i = 1; $i <= 19; $i++) {
+for ($i = 1; $i <= 23; $i++) {
     $checkboxes['checkbox' . $i] = $session->get('checkbox' . $i);
 }
 
-// Выводим значения всех чекбоксов
-dump($checkboxes);
+for ($i = 24; $i <= 46; $i++) {
+    $checkbox = $request->request->get('checkbox' . $i) ? '☑' : '□';
+    $session->set('checkbox' . $i, $checkbox);
+}
 
-exit();
+        $checkboxes2 = [];
+for ($i = 23; $i <= 46; $i++) {
+    $checkboxes2['checkbox' . $i] = $session->get('checkbox' . $i);
+}
+
+// Выводим значения всех чекбоксов
+//dump($checkboxes);
+
+//exit();
 
 
     // Сохраняем document_type в сессии

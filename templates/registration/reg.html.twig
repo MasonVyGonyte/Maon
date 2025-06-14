@@ -12,7 +12,15 @@
 <div class="example-wrapper">
     <h1></h1>
 
+    
+
+
 <form action="{{ path('app_reg') }}" method="post" class="grid-form">
+{% if error_message %}
+    <div class="alert alert-danger">
+        {{ error_message }}
+    </div>
+{% endif %}
 
     <label for="username">Логин:</label>
     <input type="text" id="username" name="username" value="{{ last_username }}" />
