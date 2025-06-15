@@ -59,6 +59,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
+        const checkboxes2 = visibleFields.querySelectorAll('[id^="checkbox"]');
+        checkboxes2.forEach(function (checkbox) {
+            const associatedInput = visibleFields.querySelector(`#${checkbox.id}_input_2`);
+            
+            // Слушатель для изменения состояния чекбокса
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                    associatedInput.style.display = 'block'; // Показываем поле
+                } else {
+                    associatedInput.style.display = 'none'; // Скрываем поле
+                }
+            });
+        });
     }
 
     function checkForm() {

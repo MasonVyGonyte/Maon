@@ -468,27 +468,52 @@ button[type="submit"]:disabled {
 
 
 <div class="checkbox-group">
+<div id="wh">
+        <input type="text" name="wh" placeholder="Рост/вес">
+    </div>
     <label for="checkbox1"><input type="checkbox" name="checkbox1" id="checkbox1" class="checkbox"> Родитель</label>
 <label for="checkbox2"><input type="checkbox" name="checkbox2" id="checkbox2" class="checkbox"> Опекун</label>
 <label for="checkbox3"><input type="checkbox" name="checkbox3" id="checkbox3" class="checkbox"> Попечитель</label>
 <label for="checkbox4"><input type="checkbox" name="checkbox4" id="checkbox4" class="checkbox"> Иное</label>
-  <div id="checkbox1_input" class="ignore-check" style="display:none;">
+  <div id="checkbox4_input" class="ignore-check" style="display:none;">
         <input type="text" name="parentDetails" placeholder="Укажите подробности">
     </div>
 <label for="checkbox5"><input type="checkbox" name="checkbox5" id="checkbox5" class="checkbox"> Нет хронических заболеваний</label>
 <label for="checkbox6"><input type="checkbox" name="checkbox6" id="checkbox6" class="checkbox"> Есть хронические заболевания</label>
+  <div id="checkbox6_input" class="ignore-check" style="display:none;">
+        <input type="text" name="sympts" placeholder="Укажите подробности">
+    </div>
 <label for="checkbox7"><input type="checkbox" name="checkbox7" id="checkbox7" class="checkbox"> Нет аллергий</label>
 <label for="checkbox8"><input type="checkbox" name="checkbox8" id="checkbox8" class="checkbox"> Есть аллергии</label>
+  <div id="checkbox8_input" class="ignore-check" style="display:none;">
+        <input type="text" name="allergy" placeholder="Укажите подробности">
+    </div>
 <label for="checkbox9"><input type="checkbox" name="checkbox9" id="checkbox9" class="checkbox"> Нет индивидуальных реакций на стресс/нагрузку</label>
 <label for="checkbox10"><input type="checkbox" name="checkbox10" id="checkbox10" class="checkbox"> Есть реакции</label>
-
+  <div id="checkbox10_input" class="ignore-check" style="display:none;">
+        <input type="text" name="stress" placeholder="Укажите подробности">
+    </div>
+    <div id="checkbox">
+        <input type="text" name="injures" placeholder="Перенесенные заболевания за последние 12 месяцев">
+    </div>
 <label for="checkbox11"><input type="checkbox" name="checkbox11" id="checkbox11" class="checkbox"> Нет противопоказаний к физическим нагрузкам</label>
 <label for="checkbox12"><input type="checkbox" name="checkbox12" id="checkbox12" class="checkbox"> Есть противопоказания</label>
+  <div id="checkbox12_input" class="ignore-check" style="display:none;">
+        <input type="text" name="contraind" placeholder="Укажите подробности">
+    </div>
 <label for="checkbox13"><input type="checkbox" name="checkbox13" id="checkbox13" class="checkbox"> Нет особенностей питания</label>
 <label for="checkbox14"><input type="checkbox" name="checkbox14" id="checkbox14" class="checkbox"> Есть особенности питания</label>
+  <div id="checkbox14_input" class="ignore-check" style="display:none;">
+        <input type="text" name="specFood" placeholder="Укажите подробности">
+    </div>
 <label for="checkbox15"><input type="checkbox" name="checkbox15" id="checkbox15" class="checkbox"> Нет инвалидности / мед. группы</label>
 <label for="checkbox16"><input type="checkbox" name="checkbox16" id="checkbox16" class="checkbox"> Есть инвалидность</label>
-
+  <div id="checkbox16_input" class="ignore-check" style="display:none;">
+        <input type="text" name="invalid" placeholder="Группа">
+    </div>
+     <div id="checkbox16_input_2" class="ignore-check" style="display:none;">
+        <input type="text" name="invalid2" placeholder="Диагноз">
+    </div>
 <label for="checkbox17"><input type="checkbox" name="checkbox17" id="checkbox17" class="checkbox"> Повышенная активность / гиперактивность</label>
 <label for="checkbox18"><input type="checkbox" name="checkbox18" id="checkbox18" class="checkbox"> Склонность к тревожности / страхам</label>
 <label for="checkbox19"><input type="checkbox" name="checkbox19" id="checkbox19" class="checkbox"> Замкнутость / трудности в общении</label>
@@ -496,6 +521,9 @@ button[type="submit"]:disabled {
 <label for="checkbox21"><input type="checkbox" name="checkbox21" id="checkbox21" class="checkbox"> Быстрая утомляемость</label>
 <label for="checkbox22"><input type="checkbox" name="checkbox22" id="checkbox22" class="checkbox"> Требуется психологическая поддержка</label>
 <label for="checkbox23"><input type="checkbox" name="checkbox23" id="checkbox23" class="checkbox"> Иное</label>
+  <div id="checkbox23_input" class="ignore-check" style="display:none;">
+        <input type="text" name="Others" placeholder="Укажите подробности">
+    </div>
 </div>
 
 
@@ -583,25 +611,52 @@ button[type="submit"]:disabled {
         <textarea name="address7" id="address7" rows="3"></textarea>
     </div>
 <div class="checkbox-group">
+<div id="wh2">
+        <input type="text" name="wh2" placeholder="Рост/вес">
+    </div>
     <label for="checkbox24"><input type="checkbox" name="checkbox24" id="checkbox24" class="checkbox"> Родитель</label>
     <label for="checkbox25"><input type="checkbox" name="checkbox25" id="checkbox25" class="checkbox"> Опекун</label>
     <label for="checkbox26"><input type="checkbox" name="checkbox26" id="checkbox26" class="checkbox"> Попечитель</label>
     <label for="checkbox27"><input type="checkbox" name="checkbox27" id="checkbox27" class="checkbox"> Иное</label>
-
+<div id="checkbox27_input" class="ignore-check" style="display:none;">
+        <input type="text" name="parentDetails2" placeholder="Укажите подробности">
+    </div>
     <label for="checkbox28"><input type="checkbox" name="checkbox28" id="checkbox28" class="checkbox"> Нет хронических заболеваний</label>
     <label for="checkbox29"><input type="checkbox" name="checkbox29" id="checkbox29" class="checkbox"> Есть хронические заболевания</label>
+    <div id="checkbox29_input" class="ignore-check" style="display:none;">
+        <input type="text" name="sympts2" placeholder="Укажите подробности">
+    </div>
     <label for="checkbox30"><input type="checkbox" name="checkbox30" id="checkbox30" class="checkbox"> Нет аллергий</label>
     <label for="checkbox31"><input type="checkbox" name="checkbox31" id="checkbox31" class="checkbox"> Есть аллергии</label>
+      <div id="checkbox31_input" class="ignore-check" style="display:none;">
+        <input type="text" name="allergy2" placeholder="Укажите подробности">
+    </div>
     <label for="checkbox32"><input type="checkbox" name="checkbox32" id="checkbox32" class="checkbox"> Нет индивидуальных реакций на стресс/нагрузку</label>
     <label for="checkbox33"><input type="checkbox" name="checkbox33" id="checkbox33" class="checkbox"> Есть реакции</label>
-
+<div id="checkbox33_input" class="ignore-check" style="display:none;">
+        <input type="text" name="stress2" placeholder="Укажите подробности">
+    </div>
+    <div id="checkbox">
+        <input type="text" name="injures2" placeholder="Перенесенные заболевания за последние 12 месяцев">
+    </div>
     <label for="checkbox34"><input type="checkbox" name="checkbox34" id="checkbox34" class="checkbox"> Нет противопоказаний к физическим нагрузкам</label>
     <label for="checkbox35"><input type="checkbox" name="checkbox35" id="checkbox35" class="checkbox"> Есть противопоказания</label>
+    <div id="checkbox12_input" class="ignore-check" style="display:none;">
+        <input type="text" name="contraind2" placeholder="Укажите подробности">
+    </div>
     <label for="checkbox36"><input type="checkbox" name="checkbox36" id="checkbox36" class="checkbox"> Нет особенностей питания</label>
     <label for="checkbox37"><input type="checkbox" name="checkbox37" id="checkbox37" class="checkbox"> Есть особенности питания</label>
+    <div id="checkbox37_input" class="ignore-check" style="display:none;">
+        <input type="text" name="specFood2" placeholder="Укажите подробности">
+    </div>
     <label for="checkbox38"><input type="checkbox" name="checkbox38" id="checkbox38" class="checkbox"> Нет инвалидности / мед. группы</label>
     <label for="checkbox39"><input type="checkbox" name="checkbox39" id="checkbox39" class="checkbox"> Есть инвалидность</label>
-
+    <div id="checkbox39_input" class="ignore-check" style="display:none;">
+        <input type="text" name="invalid3" placeholder="Группа">
+    </div>
+    <div id="checkbox39_input_2" class="ignore-check" style="display:none;">
+        <input type="text" name="invalid4" placeholder="Диагноз">
+    </div>
     <label for="checkbox40"><input type="checkbox" name="checkbox40" id="checkbox40" class="checkbox"> Повышенная активность / гиперактивность</label>
     <label for="checkbox41"><input type="checkbox" name="checkbox41" id="checkbox41" class="checkbox"> Склонность к тревожности / страхам</label>
     <label for="checkbox42"><input type="checkbox" name="checkbox42" id="checkbox42" class="checkbox"> Замкнутость / трудности в общении</label>
@@ -609,6 +664,9 @@ button[type="submit"]:disabled {
     <label for="checkbox44"><input type="checkbox" name="checkbox44" id="checkbox44" class="checkbox"> Быстрая утомляемость</label>
     <label for="checkbox45"><input type="checkbox" name="checkbox45" id="checkbox45" class="checkbox"> Требуется психологическая поддержка</label>
     <label for="checkbox46"><input type="checkbox" name="checkbox46" id="checkbox46" class="checkbox"> Иное</label>
+     <div id="checkbox46_input" class="ignore-check" style="display:none;">
+        <input type="text" name="Others2" placeholder="Укажите подробности">
+    </div>
 </div>
 
    

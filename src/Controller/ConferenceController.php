@@ -98,8 +98,40 @@ $address5 = $request->request->get('address5');
 $phone4 = $request->request->get('phone4');
 $email4 = $request->request->get('email4');
 
+$name7 = $request->request->get('name7');
+$secondName7 = $request->request->get('secondName7');
+$thirdName7 = $request->request->get('thirdName7');
+$name8 = $request->request->get('name8');
+$secondName8 = $request->request->get('secondName8');
+$thirdName8 = $request->request->get('thirdName8');
+$bday3 = $request->request->get('bday3');
+$serialSvid2 = $request->request->get('serialSvid2');
+$numSvid2 = $request->request->get('numSvid2');
+$svidIssuedBy2 = $request->request->get('svidIssuedBy2');
+$svidDate2 = $request->request->get('svidDate2');
+$address6 = $request->request->get('address6');
+$schoolInfo = $request->request->get('schoolInfo');
+$phone5 = $request->request->get('phone5');
+$phone6 = $request->request->get('phone6');
+
+$name9 = $request->request->get('name9');
+$secondName9 = $request->request->get('secondName9');
+$thirdName9 = $request->request->get('thirdName9');
+$name10 = $request->request->get('name10');
+$secondName10 = $request->request->get('secondName10');
+$thirdName10 = $request->request->get('thirdName10');
+$bday4 = $request->request->get('bday4');
+$numberPassport3 = $request->request->get('numberPassport3');
+$serialPassport3 = $request->request->get('serialPassport3');
+$passportIssuedBy3 = $request->request->get('passportIssuedBy3');
+$passportDate3 = $request->request->get('passportDate3');
+$schoolInfo2 = $request->request->get('schoolInfo2');
+$phone7 = $request->request->get('phone7');
+$phone8 = $request->request->get('phone8');
+$address7 = $request->request->get('address7');
+
 $checkboxes = [];
-for ($i = 1; $i <= 19; $i++) {
+for ($i = 1; $i <= 23; $i++) {
     $checkboxes['checkbox' . $i] = $request->request->get('checkbox' . $i) === 'on' ? '☑' : '□';
 }
 
@@ -181,6 +213,38 @@ $session->set('codeDep', $codeDep);
 $session->set('address5', $address5);
 $session->set('phone4', $phone4);
 $session->set('email4', $email4);
+
+$session->set('name7', $name7);
+$session->set('secondName7', $secondName7);
+$session->set('thirdName7', $thirdName7);
+$session->set('name8', $name8);
+$session->set('secondName8', $secondName8);
+$session->set('thirdName8', $thirdName8);
+$session->set('bday3', $bday3);
+$session->set('serialSvid2', $serialSvid2);
+$session->set('numSvid2', $numSvid2);
+$session->set('svidIssuedBy2', $svidIssuedBy2);
+$session->set('svidDate2', $svidDate2);
+$session->set('address6', $address6);
+$session->set('schoolInfo', $schoolInfo);
+$session->set('phone5', $phone5);
+$session->set('phone6', $phone6);
+
+$session->set('name9', $name9);
+$session->set('secondName9', $secondName9);
+$session->set('thirdName9', $thirdName9);
+$session->set('name10', $name10);
+$session->set('secondName10', $secondName10);
+$session->set('thirdName10', $thirdName10);
+$session->set('bday4', $bday4);
+$session->set('numberPassport3', $numberPassport3);
+$session->set('serialPassport3', $serialPassport3);
+$session->set('passportIssuedBy3', $passportIssuedBy3);
+$session->set('passportDate3', $passportDate3);
+$session->set('schoolInfo2', $schoolInfo2);
+$session->set('phone7', $phone7);
+$session->set('phone8', $phone8);
+$session->set('address7', $address7);
 
     for ($i = 1; $i <= 23; $i++) {
     $checkbox = $request->request->get('checkbox' . $i) ? '☑' : '□';

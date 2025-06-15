@@ -88,9 +88,41 @@ $address5 = $session->get('address5');
 $phone4 = $session->get('phone4');
 $email4 = $session->get('email4');
 
+$name7 = $session->get('name7');
+$secondName7 = $session->get('secondName7');
+$thirdName7 = $session->get('thirdName7');
+$name8 = $session->get('name8');
+$secondName8 = $session->get('secondName8');
+$thirdName8 = $session->get('thirdName8');
+$bday3 = $session->get('bday3');
+$serialSvid2 = $session->get('serialSvid2');
+$numSvid2 = $session->get('numSvid2');
+$svidIssuedBy2 = $session->get('svidIssuedBy2');
+$svidDate2 = $session->get('svidDate2');
+$address6 = $session->get('address6');
+$schoolInfo = $session->get('schoolInfo');
+$phone5 = $session->get('phone5');
+$phone6 = $session->get('phone6');
+
+$name9 = $session->get('name9');
+$secondName9 = $session->get('secondName9');
+$thirdName9 = $session->get('thirdName9');
+$name10 = $session->get('name10');
+$secondName10 = $session->get('secondName10');
+$thirdName10 = $session->get('thirdName10');
+$bday4 = $session->get('bday4');
+$numberPassport3 = $session->get('numberPassport3');
+$serialPassport3 = $session->get('serialPassport3');
+$passportIssuedBy3 = $session->get('passportIssuedBy3');
+$passportDate3 = $session->get('passportDate3');
+$schoolInfo2 = $session->get('schoolInfo2');
+$phone7 = $session->get('phone7');
+$phone8 = $session->get('phone8');
+$address7 = $session->get('address7');
+
    
     $checkboxes = [];
-for ($i = 1; $i <= 19; $i++) {
+for ($i = 1; $i <= 23; $i++) {
     $checkboxes['checkbox' . $i] = $session->get('checkbox' . $i);
 }
 
@@ -107,6 +139,7 @@ for ($i = 24; $i <= 46; $i++) {
             'doc4' => '/public/templates/d4.docx',
             'doc5' => '/public/templates/d5.docx',
             'doc6' => '/public/templates/d6.docx',
+            'doc7' => '/public/templates/d7.docx',
         ];
        
         
@@ -186,9 +219,41 @@ $templateProcessor->setValue('{{address5}}', $address5); // Адрес
 $templateProcessor->setValue('{{phone4}}', $phone4); // Номер телефона
 $templateProcessor->setValue('{{email4}}', $email4); // Email
 
+$templateProcessor->setValue('{{name7}}', $name7);
+$templateProcessor->setValue('{{secondName7}}', $secondName7);
+$templateProcessor->setValue('{{thirdName7}}', $thirdName7);
+$templateProcessor->setValue('{{name8}}', $name8);
+$templateProcessor->setValue('{{secondName8}}', $secondName8);
+$templateProcessor->setValue('{{thirdName8}}', $thirdName8);
+$templateProcessor->setValue('{{bday3}}', $bday3);
+$templateProcessor->setValue('{{serialSvid2}}', $serialSvid2);
+$templateProcessor->setValue('{{numSvid2}}', $numSvid2);
+$templateProcessor->setValue('{{svidIssuedBy2}}', $svidIssuedBy2);
+$templateProcessor->setValue('{{svidDate2}}', $svidDate2);
+$templateProcessor->setValue('{{address6}}', $address6);
+$templateProcessor->setValue('{{schoolInfo}}', $schoolInfo);
+$templateProcessor->setValue('{{phone5}}', $phone5);
+$templateProcessor->setValue('{{phone6}}', $phone6);
+
+$templateProcessor->setValue('{{name9}}', $name9);
+$templateProcessor->setValue('{{secondName9}}', $secondName9);
+$templateProcessor->setValue('{{thirdName9}}', $thirdName9);
+$templateProcessor->setValue('{{name10}}', $name10);
+$templateProcessor->setValue('{{secondName10}}', $secondName10);
+$templateProcessor->setValue('{{thirdName10}}', $thirdName10);
+$templateProcessor->setValue('{{bday4}}', $bday4);
+$templateProcessor->setValue('{{numberPassport3}}', $numberPassport3);
+$templateProcessor->setValue('{{serialPassport3}}', $serialPassport3);
+$templateProcessor->setValue('{{passportIssuedBy3}}', $passportIssuedBy3);
+$templateProcessor->setValue('{{passportDate3}}', $passportDate3);
+$templateProcessor->setValue('{{schoolInfo2}}', $schoolInfo2);
+$templateProcessor->setValue('{{phone7}}', $phone7);
+$templateProcessor->setValue('{{phone8}}', $phone8);
+$templateProcessor->setValue('{{address7}}', $address7);
 
 
-    for ($i = 1; $i <= 19; $i++) {
+
+    for ($i = 1; $i <= 23; $i++) {
     $templateProcessor->setValue("{{checkbox$i}}", $checkboxes['checkbox' . $i]);
 }
 
