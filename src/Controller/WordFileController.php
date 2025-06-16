@@ -120,6 +120,31 @@ $phone7 = $session->get('phone7');
 $phone8 = $session->get('phone8');
 $address7 = $session->get('address7');
 
+$wh2 = $session->get('wh2'); 
+$parentDetails2 = $session->get('parentDetails2'); 
+$sympts2 = $session->get('sympts2'); 
+$allergy2 = $session->get('allergy2'); 
+$stress2 = $session->get('stress2'); 
+$injures2 = $session->get('injures2'); 
+$contraind2 = $session->get('contraind2'); 
+$specFood2 = $session->get('specFood2');
+$others2 = $session->get('others2');
+$invalid3 = $session->get('invalid3');
+$invalid4 = $session->get('invalid4');
+
+$wh = $session->get('wh'); 
+$parentDetails = $session->get('parentDetails'); 
+$sympts = $session->get('sympts'); 
+$allergy = $session->get('allergy'); 
+$stress = $session->get('stress'); 
+$injures = $session->get('injures'); 
+$contraind = $session->get('contraind'); 
+$specFood = $session->get('specFood');
+$others = $session->get('others');
+$invalid = $session->get('invalid');
+$invalid2 = $session->get('invalid2');
+
+
    
     $checkboxes = [];
 for ($i = 1; $i <= 23; $i++) {
@@ -251,7 +276,29 @@ $templateProcessor->setValue('{{phone7}}', $phone7);
 $templateProcessor->setValue('{{phone8}}', $phone8);
 $templateProcessor->setValue('{{address7}}', $address7);
 
+$templateProcessor->setValue('{{wh2}}', $wh2); 
+$templateProcessor->setValue('{{parentDetails2}}', $parentDetails2); 
+$templateProcessor->setValue('{{sympts2}}', $sympts2); 
+$templateProcessor->setValue('{{allergy2}}', $allergy2); 
+$templateProcessor->setValue('{{stress2}}', $stress2); 
+$templateProcessor->setValue('{{injures2}}', $injures2); 
+$templateProcessor->setValue('{{contraind2}}', $contraind2); 
+$templateProcessor->setValue('{{specFood2}}', $specFood2);
+$templateProcessor->setValue('{{others2}}', $others2);
+$templateProcessor->setValue('{{invalid3}}', $invalid3);
+$templateProcessor->setValue('{{invalid4}}', $invalid4);
 
+$templateProcessor->setValue('{{wh}}', $wh); 
+$templateProcessor->setValue('{{parentDetails}}', $parentDetails); 
+$templateProcessor->setValue('{{sympts}}', $sympts); 
+$templateProcessor->setValue('{{allergy}}', $allergy); 
+$templateProcessor->setValue('{{stress}}', $stress); 
+$templateProcessor->setValue('{{injures}}', $injures); 
+$templateProcessor->setValue('{{contraind}}', $contraind); 
+$templateProcessor->setValue('{{specFood}}', $specFood);
+$templateProcessor->setValue('{{others}}', $others); 
+$templateProcessor->setValue('{{invalid}}', $invalid);
+$templateProcessor->setValue('{{invalid2}}', $invalid2); 
 
     for ($i = 1; $i <= 23; $i++) {
     $templateProcessor->setValue("{{checkbox$i}}", $checkboxes['checkbox' . $i]);

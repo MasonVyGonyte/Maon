@@ -130,6 +130,31 @@ $phone7 = $request->request->get('phone7');
 $phone8 = $request->request->get('phone8');
 $address7 = $request->request->get('address7');
 
+$wh2 = $request->request->get('wh2'); 
+$parentDetails2 = $request->request->get('parentDetails2'); 
+$sympts2 = $request->request->get('sympts2'); 
+$allergy2 = $request->request->get('allergy2'); 
+$stress2 = $request->request->get('stress2'); 
+$injures2 = $request->request->get('injures2'); 
+$contraind2 = $request->request->get('contraind2'); 
+$specFood2 = $request->request->get('specFood2');
+$others2 = $request->request->get('others2');
+$invalid3 = $request->request->get('invalid3');
+$invalid4 = $request->request->get('invalid4');
+
+$wh = $request->request->get('wh'); 
+$parentDetails = $request->request->get('parentDetails'); 
+$sympts = $request->request->get('sympts'); 
+$allergy = $request->request->get('allergy'); 
+$stress = $request->request->get('stress'); 
+$injures = $request->request->get('injures'); 
+$contraind = $request->request->get('contraind'); 
+$specFood = $request->request->get('specFood');
+$others = $request->request->get('others');
+$invalid = $request->request->get('invalid');
+$invalid2 = $request->request->get('invalid2');
+
+
 $checkboxes = [];
 for ($i = 1; $i <= 23; $i++) {
     $checkboxes['checkbox' . $i] = $request->request->get('checkbox' . $i) === 'on' ? '☑' : '□';
@@ -245,6 +270,31 @@ $session->set('schoolInfo2', $schoolInfo2);
 $session->set('phone7', $phone7);
 $session->set('phone8', $phone8);
 $session->set('address7', $address7);
+
+$session->set('wh2', $wh2); 
+$session->set('parentDetails2', $parentDetails2); 
+$session->set('sympts2', $sympts2); 
+$session->set('allergy2', $allergy2); 
+$session->set('stress2', $stress2); 
+$session->set('injures2', $injures2); 
+$session->set('contraind2', $contraind2); 
+$session->set('specFood2', $specFood2);
+$session->set('others2', $others2);
+$session->set('invalid3', $invalid3);
+$session->set('invalid4', $invalid4);
+
+$session->set('wh', $wh); 
+$session->set('parentDetails', $parentDetails); 
+$session->set('sympts', $sympts); 
+$session->set('allergy', $allergy); 
+$session->set('stress', $stress); 
+$session->set('injures', $injures); 
+$session->set('contraind', $contraind); 
+$session->set('specFood', $specFood);
+$session->set('others', $others);
+$session->set('invalid', $invalid);
+$session->set('invalid2', $invalid2);
+
 
     for ($i = 1; $i <= 23; $i++) {
     $checkbox = $request->request->get('checkbox' . $i) ? '☑' : '□';
