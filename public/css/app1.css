@@ -6,8 +6,8 @@ body {
 
 .container
 {
-    top: 50%; /* Смещение вниз на 50% экрана */
-    left: 20%; /* Смещение вправо на 50% экрана */
+    top: 50%; 
+    left: 20%; 
     display: grid;
     gap: 24vw;
 }
@@ -167,6 +167,14 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.absolute-btn {
+    position: absolute;  /* Используем абсолютное позиционирование */
+    top: 10px;            /* Сдвигаем кнопку на 10px от верхнего края */
+    right: 110px;          /* Сдвигаем кнопку на 10px от правого края */
+    z-index: 10;          /* Убедитесь, что кнопка будет поверх других элементов */
+}
+
 
 button:hover {
     background-color: #45a049;

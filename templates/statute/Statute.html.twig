@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/app1.css') }}">
+
+
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+
+
+#logoutButton {
+        position: absolute;  /* Используем абсолютное позиционирование */
+        top: 10px;           /* Сдвигаем кнопку на 10px от верхнего края */
+        right: 10px;         /* Сдвигаем кнопку на 10px от правого края */
+        z-index: 10;         /* Убедитесь, что кнопка будет поверх других элементов */
+    }
+
+
+    </style>
+    
+{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+    <h1></h1>
+
+    
+</div>
+
+<div class="container">
+<button onclick="window.location.href='{{ path('show_conference') }}'">Перейти на другую страницу</button>
+</div>
+<!-- Подключаем jQuery и Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/hidden.js') }}"></script>
+            
+    <script src="{{ asset('js/B.js') }}"></script>
+
+    <!-- Скрипт для управления согласием -->
+    <script>
+        
+        // Вставка текста пользовательского соглашения
+        document.getElementById('agreement-text').innerHTML = `
+            <h2>Пользовательское соглашение</h2>
+<p>Настоящим документом Вы свободно, своей волей и в своем интересе в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и Гражданским кодексом Российской Федерации даете МОО "Спецвзвод" (115211, город Москва, Каширское ш., д. 55 к. 3, кв. 665 , ИНН 7724333247, ОГРН 1157700014669) (далее – Организация) сознательное, информированное согласие на обработку Ваших персональных данных, а именно:</p>
+
+<ul>
+    <li>паспортные данные;</li>
+    <li>анкетные данные;</li>
+    <li>данные иных документов, которые с учетом специфики деятельности Организации и в соответствии с законодательством Российской Федерации должны быть предъявлены мною;</li>
+    <li>данные договора о членства и приложений к нему;</li>
+    <li>фотографии;</li>
+    <li>иные сведения обо мне, которые необходимо для корректного документального оформления правоотношений между мною и Организацией.</li>
+</ul>
+
+<p>Указанные персональные данные будут использоваться для достижения уставных целей деятельности Организации.</p>
+
+<p>Настоящее согласие действует со дня акцепта в течение 12 месяцев или до момента отзыва настоящего согласия.</p>
+
+        `;
+    </script>
+
+{% endblock %}

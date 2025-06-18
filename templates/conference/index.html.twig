@@ -27,6 +27,7 @@ button[type="submit"]:disabled {
     }
 
 
+
     </style>
     
 {% endblock %}
@@ -683,7 +684,9 @@ button[type="submit"]:disabled {
 
 <form action="{{ path('app_logout') }}" method="post">
         <button type="submit" id="logoutButton"> Выход</button>
+        
     </form>
+<button class="absolute-btn" onclick="window.location.href='{{ path('app_statute') }}'">О нас</button>
 
     <!-- Подключаем jQuery и Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
